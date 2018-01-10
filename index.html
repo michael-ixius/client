@@ -13,15 +13,23 @@
       </script>
 </head>
 <body>
-        <ul class="book-template">
+        <ul id="book-list">
         </ul>
-
+        <h2 id="book-count">  </h2>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="scripts/models/book.js"></script>
     <script>
-    Books.initpage(Books.fetchAll);
+    // Books.initpage(Books.fetchAll);
+    </script>
+    <script>
+        var __API_URL__ = 'https://mb-ip-booklist.herokuapp.com';
+        $.getJSON(__API_URL__).then(results => {
+            results.forEach(bookData =>{
+                $('#book-list').append(`<li>${dataPoint.row[0]}</li>`)
+            })
+        })
     </script>
 </body>
 </html>

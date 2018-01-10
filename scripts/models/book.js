@@ -1,4 +1,4 @@
-var __API_URL__ = 'https://mb-ip-booklist.herokuapp.com';
+
 
 function Books() {
     
