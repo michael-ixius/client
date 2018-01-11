@@ -15,13 +15,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-    <script src="scripts/models/book.js"></script>
+    <!-- <script src="scripts/models/book.js"></script> -->
    
     <script>
-        var __API_URL__ = 'https://mb-ip-booklist.herokuapp.com';
+        var __API_URL__ = 'https://mb-ip-booklist.herokuapp.com/api/v1/books';
         // var __API_URL__ = 'https://localhost:3000/api/v1/books';
         $.getJSON(__API_URL__).then(books => {
-            console.log(results);
+            console.log(books);
             books.forEach(bookData =>{
                 $('#book-list').append(`<li>${bookData.title}</li>`)
             })
