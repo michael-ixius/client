@@ -24,7 +24,7 @@ var app = app || {};
 
 Book.fetchAll = () => $.getJSON(__API_URL__).catch(errorCallback)
 
-Book.fetchOne = (id) => $.getJson(__API_URL__ + '/' + id).catch(errorCallback)
+Book.fetchOne = (id) => $.getJSON(__API_URL__ + '/' + id).catch(errorCallback)
 
 Book.deleteOne = id => {
   return $.ajax({

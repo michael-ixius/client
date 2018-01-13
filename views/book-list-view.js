@@ -8,10 +8,15 @@ var app = app || {};
     bookListView.init = (books) => {
 
         books.forEach(bookData =>{
-        $('#book-list').append(`<li>${bookData.title}:${bookData.author}</li>`)
+        $('#book-list').append(`<li data-id="${bookData.book_id}">${bookData.title}:${bookData.author}</li>`)
     })
-        console.log('books', books)
-        $('.page').hide()
+
+    $('#book-list').on('click', 'li', (event) => {
+        const id = $(event.target).data('id')
+        page('/books/' + id)
+    })
+    
+       
         $view.show()
     }
 
