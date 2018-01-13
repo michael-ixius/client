@@ -2,24 +2,25 @@ var app = app || {};
 
 
 (module =>  {
+
   const __API_URL__ = 'https://mb-ip-booklist.herokuapp.com/api/v1/books';
 
-  // function (Book() => {
 
-  // })
 
-  function errorCallback(err) {
-    console.error(err)
-    module.errorView.initErrorPage(err)
-  }
 //   $.getJSON(__API_URL__).then(books => {
 //     console.log(books);
 //     books.forEach(bookData =>{
 //         $('#book-list').append(`<li>${bookData.title}</li>`)
 //     })
 // })
+  function errorCallback(err) {
+    console.error(err)
+    module.errorView.initErrorPage(err)
+  }
 
-Book.all = []
+  const Book = {}
+
+  Book.all = []
 
 Book.fetchAll = () => $.getJSON(__API_URL__).catch(errorCallback)
 
@@ -39,4 +40,6 @@ Book.update = book => {
     data: book
   }).catch(errorCallback)
 }
-})
+
+module.Book = Book
+})(app)
