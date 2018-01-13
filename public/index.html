@@ -10,10 +10,10 @@
 <body>
     <header>
      <nav>
-         <ul>
-             <a href="/">home</a>
-             <a href="/books/1">one</a>
-             <a href="/books/new">new</a>
+         
+            <ul><a href="/">home</a></ul>
+             <ul><a href="/books/1">one</a><ul>
+             <ul><a href="/books/new">new</a></ul>
          </ul>
      </nav>
     </header>
@@ -22,26 +22,20 @@
     <ul id="book-list"></ul>
 
 </section>  
-<section id="book-list" class="page">list</section>
-<section id="book-detail" class="page">detail</section>
-<section id="book-new" class="page">new</section>
+<section id="book-list-view" class="page">list</section>
+<section id="book-detail-view" class="page">detail</section>
+<section id="book-create-view" class="page">new</section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 
-    <!-- <script src="scripts/models/book.js"></script> -->
+    <script src="/scripts/models/book.js"></script>
    
-    <script>
-        var __API_URL__ = 'https://mb-ip-booklist.herokuapp.com/api/v1/books';
-        // var __API_URL__ = 'https://localhost:3000/api/v1/books';
-        $.getJSON(__API_URL__).then(books => {
-            console.log(books);
-            books.forEach(bookData =>{
-                $('#book-list').append(`<li>${bookData.title}</li>`)
-            })
-        })
-    </script>
-    <script src="controllers/routes.js"></script>
+    <script src="/views/book-list-view.js"></script>
+    <script src="/views/book-detail-view.js"></script>
+    <script src="/views/book-create-view.js"></script>
+    
+    <script src="/controllers/route.js"></script>
 </body>
 </html>
