@@ -1,0 +1,107 @@
+#body {
+    width: 80%;
+    overflow: hidden;
+    /*   padding 10%; */
+    margin: auto;
+  }
+  
+  header {
+    background-color: teal;
+    background-image: url(https://webdesignerdepot.s3.amazonaws.com/default-images/16.jpg);
+    background-repeat: ;
+    background-size: contain;
+    background-size: 85%;
+    opacity: 0.8;
+  }
+  
+  nav {
+    overflow: hidden;
+  }
+  .nav {
+    float: left;
+    display: inline-block;
+    color: white;
+    /*   text-align: center; */
+    padding: 7px 8px;
+    textdecoration: none;
+    font-size: 1em;
+  }
+  
+  .nav a:hover {
+    background-color: pink;
+    color: orange;
+  }
+  .nav a {
+    text-decoration: none;
+    color: white;
+  }
+  section {
+    border-style: dashed;
+    margin: auto;
+    border: 3px solid green;
+    padding: 10px;
+    /*     background-size: contain; */
+    height: 100%;
+    border: 2px solid;
+    color: red;
+    resize: both;
+    /*   overflow: hidden; */
+  }
+  #book-list-view {
+  }
+  #book-detail-view {
+  }
+  #book-create-view {
+  }
+  /*     #book-list-view {
+      border-color: red;
+      background: url('https://lostandtaken.com/wp-content/uploads/edd/2016/02/grungy-front-book-cover-3.jpg')no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    } */
+
+    * {
+        border-color: black;
+    }
+
+  /* #book-list>li {
+    margin:auto;
+    margin-bottom: 2%;
+    padding-bottom: 5%;
+    padding-left: -5;
+    background-color: rgba(224, 242, 233, 0.5);
+    border-radius: 0.5em;
+    background: url("https://lostandtaken.com/wp-content/uploads/edd/2016/02/grungy-front-book-cover-3.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    opacity: 0.8;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 90%;
+    width: 80%;
+    height: 10em;
+    font-size: 1em;
+    text-align: center;
+    -moz-text-size-adjust: auto;
+    padding-top: 35%;
+  }
+  li {
+      list-style: none;
+  } */
+  
+  #book-detail-view, #book-create-view {
+    background: #e5e3e3;
+    border-radius: 10px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  

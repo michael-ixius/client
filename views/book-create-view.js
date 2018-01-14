@@ -6,7 +6,7 @@ var app = app || {};
     const $view = $('#book-create-view')
 
     bookCreateView.init = () => {
-        $('.page').hide()
+        $('.pages').hide();
         $view.show()
     }
 

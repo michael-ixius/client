@@ -26,7 +26,7 @@ Book.fetchAll = () => $.getJSON(__API_URL__).catch(errorCallback)
 
 Book.fetchOne = (id) => $.getJSON(__API_URL__ + '/' + id).catch(errorCallback)
 
-Book.deleteOne = id => {
+Book.destroy = id => {
   return $.ajax({
     url: __API_URL__ + '/' + id,
     method: 'DELETE'
@@ -40,6 +40,11 @@ Book.update = book => {
     data: book
   }).catch(errorCallback)
 }
+Book.create = book => {
+  return $.post(__API_URL__,book).catch(errorCallback)
+}
+
+
 
 module.Book = Book
 })(app)
