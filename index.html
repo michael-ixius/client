@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/modules.css">
+    <title>Document</title>
+    <!-- <script id="book-details-template" type="text/x-handlebars-template">
+        <li data-id={{book_id}}>
+        <h3>{{title}}</h3>
+        <div class="book-dets">
+            <p>{{author}}</p>
+            <p>{{isbn}}</p>
+
+            <img src="http://devilmaycry.wikia.com/wiki/Devil_Kingdom">
+            <p>{{description}}</p>
+        </div>
+        </li>
+    </script> -->
+</head>
+<body>
+  <div id="body">
+    <header>
+     <nav>
+          <ul class="nav">
+            <li id="home"><a href="/">Home</a></li>
+            <li id="list"><a href="/books/1">List</a><li>
+            <li id="login"><a href="/login">Login</a></li>
+             <li id="new" class="protected"><a href="/books/new">Add a Book</a></li>
+               </ul>     
+     </nav>
+    </header>
+<section id="book-list-view" class="page">
+    <h3>Books Currently Available</h3>
+        <ul id="book-list"></ul>
+</section>
+
+<section id="book-detail-view" class="page">
+   <!-- <div id="topStart2">
+ <fieldset>
+    <form>
+        <legend id= "newBookList" >Add A New Book</legend>
+        <p class = "">
+          <label for="org">Title: </label><input id="org" type="text" value=""/>
+          </p>
+        <p class = "signupEmail">  
+          <label for="email">Author</label><input name="email" type="text" />
+      </p>        <p class = "image_url"> 
+          <label for="phone">image_url</label><input name="phone" type="text" />
+      </p>
+        <p>
+          <label for="description">Description</label><input name="description" type="text" /></p>
+    </form>
+                <button id="update-btn" data-id"{{book_id}}" class="admin protected">Update</button>
+                <button id="delete-btn" data-id"{{book_id}}" class"admin protected">Delete</button>
+  </fieldset>
+  </div>-->
+</section>
+<section id="book-create-view" class="page">
+  <div id="topStart2">
+ <fieldset>
+    <form>
+        <legend id= "newBookList" >Add A New Book</legend>
+        <p class = "">
+          <label for="org">Title: </label><input id="org" type="text" value=""/>
+          </p>
+        <p class = "signupEmail">  
+          <label for="email">Author</label><input name="email" type="text" />
+      </p>
+<!--         <p class = "signupPhone"> 
+          <label for="phone">image_url</label><input name="phone" type="text" />
+      </p> -->
+        <p class = "signupOrgClass"> 
+          <label for="orgclass"> Image_url</label><input name="orgclass" type="text" />
+      </p>
+        <p>
+          <label for="description">Description</label><input name="description" type="text" /></p>
+    <button id="submitSignup" type="submit">Add Book</button>
+    </form>
+  </fieldset>
+  </div>
+</section>
+<section id="book-update-view" class="page">
+<form >
+        <input type="text" placeholder="title">
+        <button>Submit</button>
+
+</form>
+
+</section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+
+    <script src="/scripts/models/book.js"></script>    
+    <script src="/controllers/route.js"></script>
+    <script src="/views/book-list-view.js"></script>
+    <script src="/views/book-detail-view.js"></script>
+    <script src="/views/book-create-view.js"></script>
+  </div>
+</body>
+</html>
