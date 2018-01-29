@@ -10,15 +10,12 @@ var app = app || {};
         let $view = $('#book-details-template').html();
         let template = Handlebars.compile($view);
         
-        // $view.append(`<h1>${bookData.title}</h1>`)
-
-        console.log('hi',bookData)
-        // let template = Handlebars.compile($('#book-details-template').text());
-
-        
-        console.log('inside',bookData)
+        console.log('success',bookData)
         $('#book-detail-view').empty().append(template(bookData));
-        
+
+        $('#book-detail-view').on('click', '#update-btn', () =>{
+            app.Book.updateOne(book.book_id).then(() => page('/'))
+        })
         
         
         // if(!localStorage.getItem('token')){
