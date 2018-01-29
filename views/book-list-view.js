@@ -18,6 +18,10 @@ var app = app || {};
         page('/books/' + id)
     })
     
+    $('#create-btn').off().on('click', (event) => {
+        console.log('I hit create!')
+        $('#book-create-view').show(event);
+    })
        
         $view.show()
     }

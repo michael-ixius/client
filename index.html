@@ -46,43 +46,30 @@
         <div id="description"></div> -->
         </ul>
       </div>
-   
+                <button id="create-btn" data-id"{{book_id}}">Create</button>
                 <button id="update-btn" data-id"{{book_id}}">Update</button>
-                <button id="delete-btn" data-id"{{book_id}}" class"admin protected">Delete</button>
+                <button id="delete-btn" data-id"{{book_id}}">Delete</button>
   
  
 </section>
 <section id="book-create-view" class="page">
-  <div id="topStart2">
- <fieldset>
-    <form>
-        <legend id= "newBookList" >Add A New Book</legend>
-        <p class = "">
-          <label for="org">Title: </label><input id="org" type="text" value=""/>
-          </p>
-        <p class = "signupEmail">  
-          <label for="email">Author</label><input name="email" type="text" />
-      </p>
-<!--         <p class = "signupPhone"> 
-          <label for="phone">image_url</label><input name="phone" type="text" />
-      </p> -->
-        <p class = "signupOrgClass"> 
-          <label for="orgclass"> Image_url</label><input name="orgclass" type="text" />
-      </p>
-        <p>
-          <label for="description">Description</label><input name="description" type="text" /></p>
-    <button id="submitSignup" type="submit">Add Book</button>
-    </form>
-  </fieldset>
-  </div>
-</section>
-<section id="book-update-view" class="page">
-<form >
-        <input type="text" placeholder="title">
-        <button>Submit</button>
-
-</form>
-
+  <h1>New Book</h1>
+  <form action="#" id="book-form">
+    <label>
+      <input type="text" id="book-title" placeholder="book title" required>
+    </label>
+    <textarea id="description-body" rows="8" cols="40" required></textarea>
+    <label>
+      <input type="text" id="book-author" placeholder="Author Name" required>
+    </label>
+    <label>
+      <input type="text" id="image-url" placeholder="image URL" required>
+    </label>
+    <label>
+      <input type="text" id="isbn" placeholder="isbn" required>
+    </label>
+    <button type="submit">Submit and return to the home page</button>
+  </form>
 </section>
 
 
