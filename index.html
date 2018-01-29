@@ -6,18 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/modules.css">
     <title>Document</title>
-    <!-- <script id="book-details-template" type="text/x-handlebars-template">
-        <li data-id={{book_id}}>
-        <h3>{{title}}</h3>
-        <div class="book-dets">
-            <p>{{author}}</p>
-            <p>{{isbn}}</p>
+    <script id="book-details-template" type="text/x-handlebars-template">
+    <section class="book-dets"> 
+      <div data-id={{book_id}}>
+      <h3>{{title}}</h3>
+      <div>{{author}}</div>
+      <div>{{isbn}}</div>
+      <div>{{image-url}}</div>
+      <div>{{description}}</div>
+      </div>
+    </section>
+   
+    </script>
 
-            <img src="http://devilmaycry.wikia.com/wiki/Devil_Kingdom">
-            <p>{{description}}</p>
-        </div>
-        </li>
-    </script> -->
 </head>
 <body>
   <div id="body">
@@ -37,25 +38,19 @@
 </section>
 
 <section id="book-detail-view" class="page">
-   <!-- <div id="topStart2">
- <fieldset>
-    <form>
-        <legend id= "newBookList" >Add A New Book</legend>
-        <p class = "">
-          <label for="org">Title: </label><input id="org" type="text" value=""/>
-          </p>
-        <p class = "signupEmail">  
-          <label for="email">Author</label><input name="email" type="text" />
-      </p>        <p class = "image_url"> 
-          <label for="phone">image_url</label><input name="phone" type="text" />
-      </p>
-        <p>
-          <label for="description">Description</label><input name="description" type="text" /></p>
-    </form>
+    <ul class="book-dets-template"> 
+        <!-- <h3 id="title"></h3>
+        <div id="author"></div>
+        <div id="isbn"></div>
+        <div id="image-url"></div>
+        <div id="description"></div> -->
+        </ul>
+      </div>
+   
                 <button id="update-btn" data-id"{{book_id}}" class="admin protected">Update</button>
                 <button id="delete-btn" data-id"{{book_id}}" class"admin protected">Delete</button>
-  </fieldset>
-  </div>-->
+  
+ 
 </section>
 <section id="book-create-view" class="page">
   <div id="topStart2">
