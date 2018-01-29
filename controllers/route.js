@@ -16,7 +16,8 @@ page('/', () => {
         app.bookListView.init(books)
     })
 })
-page('/books/new', () => app.bookCreateView.init())
+page('/books/new', () => 
+app.bookCreateView.init())
 
 page('/books/:id', (ctx) => {
 console.log(ctx.params.id)
@@ -26,5 +27,7 @@ console.log(ctx.params.id)
     
 })
 })
+
+
 
 page.start() 

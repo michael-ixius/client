@@ -40,9 +40,11 @@ Book.update = book => {
     data: book
   }).catch(errorCallback)
 }
-Book.create = book => {
-  return $.post(__API_URL__,book).catch(errorCallback)
-}
+
+Book.create = book => $.post(__API_URL__, book);
+  
+  
+
 
 
 

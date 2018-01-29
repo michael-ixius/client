@@ -13,9 +13,9 @@ var app = app || {};
         console.log('success',bookData)
         $('#book-detail-view').empty().append(template(bookData));
 
-        $('#book-detail-view').on('click', '#update-btn', () =>{
-            app.Book.updateOne(book.book_id).then(() => page('/'))
-        })
+        // $('#book-detail-view').on('click', () =>{
+        //     app.Book.updateOne(book.book_id).then(() => page('/'))
+        // })
         
         
         // if(!localStorage.getItem('token')){

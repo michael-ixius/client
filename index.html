@@ -53,22 +53,24 @@
  
 </section>
 <section id="book-create-view" class="page">
-  <h1>New Book</h1>
-  <form action="#" id="book-form">
-    <label>
-      <input type="text" id="book-title" placeholder="book title" required>
-    </label>
-    <textarea id="description-body" rows="8" cols="40" required></textarea>
-    <label>
-      <input type="text" id="book-author" placeholder="Author Name" required>
-    </label>
-    <label>
-      <input type="text" id="image-url" placeholder="image URL" required>
-    </label>
-    <label>
-      <input type="text" id="isbn" placeholder="isbn" required>
-    </label>
-    <button id="form-submit" type="submit">Submit and return to the home page</button>
+  <form id="new-book-form">
+      <label for="title">Title</label>
+      <input id="create-title" type="text" name="title" placeholder="Title">
+
+      <label for="author">Author</label>
+      <input id="create-author" type="text" name="author" placeholder="Author">
+
+      <label for="isbn">ISBN</label>
+      <input id="create-isbn" type="text" name="isbn" placeholder="ISBN">
+
+      <label for="image-url">Image URL</label>
+      <input id="create-image-url" type="text" name="image-url" placeholder="Image URL">
+
+      <label for="desription">Description</label>
+      <textarea id="create-description" name="description" placeholder="Description"></textarea>
+
+      <input type="submit" name="submit">
+
   </form>
 </section>
 
